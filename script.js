@@ -16,7 +16,7 @@ function encriptar() {
     var txt_cifrado = txt_cifrado.replace(/a/gm, "ai");
     var txt_cifrado = txt_cifrado.replace(/u/gm, "ufat");
 
-    if (/[^a-z ]/.test(texto)) {
+    if (/[^a-zñ ]/.test(texto)) {
         alert("Solo se permiten letras minusculas y sin acento")
     }
     else if (texto.length === 0) {
@@ -26,9 +26,10 @@ function encriptar() {
         document.getElementById("texto1-contder").style.display = "none";
         document.getElementById("texto2-contder").style.display = "none";
         document.getElementById("output-texto").style.display = "inline-block";
-        document.getElementById("output-texto").innerHTML = txt_cifrado;        
+        document.getElementById("output-texto").innerHTML = txt_cifrado;
+        
+        value();        
     }
-    value();
 }
 
 function desencriptar() {
